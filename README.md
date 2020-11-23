@@ -12,7 +12,7 @@ Compile it using your favorite C interpreter, such as CodeBlocks, or via command
 3. Then type this:
 ```./C-Program```
 
-4. Insert each of the following and press enter each time:
+4. Insert each of the following and press ```Enter``` each time:
 
    4.1. Number of students
    
@@ -34,4 +34,4 @@ Compile it using your favorite C interpreter, such as CodeBlocks, or via command
    ------ | ------------ | -------------
    N's Name | N's Student ID | N's Average Grade
 
-Thank you!
+Have fun!
