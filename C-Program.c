@@ -1,41 +1,51 @@
+/*	
+Made by Gabriel Velasco Fernandes.
+All rights reserved.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define nomeMax 102
+#define nameMax 102
 
 int main() {
-	struct aluno {
-		char nome[102];
-		int ra;
-		float notaP1;
-		float notaP2;
-	};
+	typedef struct student_ {
+		char name[102];
+		int id;
+		float grade1;
+		float grade2;
+		float average;
+	} *student;
 	
 	int n, i;
-	struct aluno* estudante;
 	
+	// # of students:
 	scanf("%d", &n);
 	
-	estudante = (struct aluno*) malloc( n * sizeof( struct aluno ) );
-	float* media = (float *) malloc( n * sizeof( float ) );
+	// Allocation of n students in memory:
+	student students = (student) malloc( n * sizeof( struct student_ ) );
 	
+	// Student input info and average calculation:
 	for( i=0; i < n; i++ ) {
 		getchar();
-		fgets(estudante[i].nome,nomeMax,stdin);
-		scanf("%d", &estudante[i].ra);
-		scanf("%f", &estudante[i].notaP1);
-		scanf("%f", &estudante[i].notaP2);
+		fgets(students[i].name, nameMax, stdin);
+		scanf("%d", &students[i].id);
+		scanf("%f", &students[i].grade1);
+		scanf("%f", &students[i].grade2);
 		
-		estudante[i].nome[strlen(estudante[i].nome)-1] = '\0';
-		media[i] = ( estudante[i].notaP1 + estudante[i].notaP2 ) / 2;
+		// '\0' to virtually trim the string:
+		students[i].name[strlen(students[i].name)-1] = '\0';
+		
+		students[i].average = ( students[i].grade1 + students[i].grade2 ) / 2;
 	}
 	
+	// Display info from each student:
 	for( i=0; i < n; i++ ) {
-		printf("%d", estudante[i].ra);
+		printf("%d", students[i].id);
 			printf("\t");
-		printf("%s", estudante[i].nome);
+		printf("%s", students[i].name);
 			printf("\t");
-		printf("%.2f", media[i]);
+		printf("%.2f", students[i].average);
 		printf("\n");
 	}
 }
