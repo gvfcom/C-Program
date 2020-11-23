@@ -28,10 +28,10 @@ Compile it using your favorite C interpreter, such as CodeBlocks, or via command
         
                4.1.n.4. Student n's grade #2
 
-5. A list containing all of the students' information should be displayed, like this:
+5. A list containing all of the students' information should be displayed in a tabulated format, like this:
 
-   Name | Student ID | Average Grade
-   ---- | ---------- | -------------
+   (Name) | (Student ID) | (Average Grade)
+   ------ | ------------ | -------------
    N's Name | N's Student ID | N's Average Grade
 
 Thank you!
