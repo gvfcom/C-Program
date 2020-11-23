@@ -4,7 +4,7 @@ C command prompt program to get students' name, student ID, tests grades, averag
 # Instructions
 Compile it using your favorite C interpreter, such as CodeBlocks, or via command prompt as long as a C compiler is installed:
 
-1. Download the source code and drop it on the desktop
+1. Download the ```C-Program.c``` file and drop it on the desktop
 
 2. Open CMD and type this in:
 ```gcc -o C-Program C-Program.c```
