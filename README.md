@@ -29,3 +29,5 @@ Compile it using your favorite C interpreter, such as CodeBlocks, or via command
                4.1.n.4. Student n's grade #2
 
 5. A list containing all of the students' information should be displayed.
+
+Thank you!
